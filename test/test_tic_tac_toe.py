@@ -1,3 +1,6 @@
+from src.tic_tac_toe import board_factory
+
+
 def test_initial_state() -> None:
     board = (
         (None, None, None),
