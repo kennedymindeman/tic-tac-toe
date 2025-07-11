@@ -1,4 +1,4 @@
-from src.tic_tac_toe import board_factory
+from src.tic_tac_toe import board_factory, make_move
 
 
 def test_initial_state() -> None:
@@ -16,4 +16,9 @@ def test_make_move() -> None:
         (None, None, None),
         (None, None, None),
     )
-    make_move(board, "x", (0, 0))
+    board = make_move(board, "x", (0, 0))
+    assert board == (
+        ("x", None, None),
+        (None, None, None),
+        (None, None, None),
+    )
